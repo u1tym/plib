@@ -1,0 +1,8 @@
+{
+    "python.analysis.extraPaths": [
+        "./log",
+        "./psql_db",
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "strict"
+}
