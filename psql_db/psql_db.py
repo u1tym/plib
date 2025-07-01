@@ -23,17 +23,25 @@ class Db:
     _con: Optional[Connection]
     _cur: Optional[Cursor]
 
+    _ip: str
+    _pt: int
+    _nm: str
+    _us: str
+    _pw: str
+
+    last_error: str
+
     def __init__(self: Self, ip: str, port: int, dbname: str, user: str, password: str) -> None:
         self._con = None
         self._cur = None
 
-        self._ip: str = ip
-        self._pt: int = port
-        self._nm: str = dbname
-        self._us: str = user
-        self._pw: str = password
+        self._ip = ip
+        self._pt = port
+        self._nm = dbname
+        self._us = user
+        self._pw = password
 
-        self.last_error: str = ""
+        self.last_error = ""
 
     def connect(self: Self) -> bool:
         result: bool = False

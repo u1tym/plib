@@ -1,0 +1,33 @@
+[tool.mypy]
+
+# 使用Pythonのバージョン
+python_version = 3.11
+
+cache_dir = "NUL"
+
+# 厳格モードの有効化
+strict = true
+
+# 型なし関数の内部もチェック対象とする
+check_untyped_defs = true
+disallow_any_decorated = false
+disallow_any_explicit = false
+disallow_any_expr = false
+disallow_any_generics = false
+disallow_subclassing_any = true
+disallow_untyped_calls = true
+# 型アノテーションの無い関数定義を禁止
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_untyped_decorators = true
+# Optionalの明示的な記述を要求
+no_implicit_optional = true
+strict_equality = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_unreachable = true
+warn_redundant_casts = true
+warn_no_return = true
+
+
+allow_untyped_globals = false
